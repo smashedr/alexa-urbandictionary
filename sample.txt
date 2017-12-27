@@ -1,0 +1,5 @@
+UrbanLookup to lookup {slot value|term}
+UrbanLookup to define {slot value|term}
+UrbanLookup to search {slot value|term}
+UrbanLookup to find {slot value|term}
+UrbanLookup for {slot value|term}

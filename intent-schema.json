@@ -1,0 +1,13 @@
+{
+  "intents": [
+    {
+      "intent": "UrbanLookup",
+      "slots": [
+        {
+          "name": "term",
+          "type": "LITERAL"
+        }
+      ]
+    }
+  ]
+}
