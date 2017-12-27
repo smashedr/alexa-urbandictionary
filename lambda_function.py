@@ -35,7 +35,7 @@ def lookup_urban(search_term):
     params = {
         'term': search_term,
     }
-    r = requests.get(url, params=params)
+    r = requests.get(url, params=params, timeout=3)
     j = r.json()
     return j['list'][0]['definition']
 
