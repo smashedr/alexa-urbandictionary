@@ -44,7 +44,8 @@ def test_data(term):
 
 
 if __name__ == '__main__':
+    bad_resp = lambda_handler({}, None)
     error_resp = lambda_handler(test_data('notarealword'), None)
     good_resp = lambda_handler(test_data('python'), None)
-    if not good_resp or not error_resp:
-        raise ValueError('Error: missing alexa_resp')
+    if not good_resp or not error_resp or not bad_resp:
+        raise ValueError('Error: missing alexa_resp')  # pragma: no cover
