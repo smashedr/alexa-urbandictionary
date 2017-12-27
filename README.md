@@ -1,6 +1,6 @@
 # Alexa Urban Dictionary
 
-[![build status](https://git.cssnr.com/shane/mayflower-ci/badges/master/build.svg)](https://git.cssnr.com/shane/mayflower-ci/commits/master) [![coverage report](https://git.cssnr.com/shane/mayflower-ci/badges/master/coverage.svg)](https://git.cssnr.com/shane/mayflower-ci/commits/master)
+[![build status](https://git.cssnr.com/shane/alexa-urbandictionary/badges/master/build.svg)](https://git.cssnr.com/shane/alexa-urbandictionary/commits/master) [![coverage report](https://git.cssnr.com/shane/alexa-urbandictionary/badges/master/coverage.svg)](https://git.cssnr.com/shane/alexa-urbandictionary/commits/master)
 
 This skill lets you look Urban Dictionary definitions with Alexa.
 
