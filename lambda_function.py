@@ -73,7 +73,7 @@ def lambda_handler(event, context):
         return alexa
     except Exception as error:
         print('error: {}'.format(error))
-        resp = 'Error looking up {}, please something else.'.format(value)
+        resp = 'Error looking up {}, please try something else.'.format(value)
         alexa = build_response(
             {},
             build_speechlet_response('Error', resp, None, True)
