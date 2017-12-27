@@ -1,7 +1,10 @@
 import requests
 
+TXT_UNKNOWN = 'I did not understand that request, please try something else.'
+TXT_ERROR = 'Error looking up {}, please try something else.'
 
-def build_speechlet_response(title, output, reprompt_text, should_end_session):
+
+def build_speech_response(title, output, reprompt_text, should_end_session):
     return {
         'outputSpeech': {
             'type': 'PlainText',
@@ -22,11 +25,11 @@ def build_speechlet_response(title, output, reprompt_text, should_end_session):
     }
 
 
-def build_response(session_attributes, speechlet_response):
+def alexa_response(session_attributes, speech_response):
     return {
         'version': '1.0',
         'sessionAttributes': session_attributes,
-        'response': speechlet_response
+        'response': speech_response
     }
 
 
@@ -53,30 +56,27 @@ def lambda_handler(event, context):
         print('value: {}'.format(value))
     except Exception as error:
         print('error: {}'.format(error))
-        resp = 'I did not understand that request, please try something else.'
-        alexa = build_response(
+        alexa = alexa_response(
             {},
-            build_speechlet_response('Error', resp, None, True)
+            build_speech_response('Error', TXT_UNKNOWN, None, True)
         )
         return alexa
 
     try:
         definition = lookup_urban(value)
         print('definition: {}'.format(definition))
-        resp = '{}. {}'.format(
+        speech = '{}. {}'.format(
             value, definition
         )
-        alexa = build_response(
+        alexa = alexa_response(
             {},
-            build_speechlet_response('Definition', resp, None, True)
+            build_speech_response('Definition', speech, None, True)
         )
         return alexa
     except Exception as error:
         print('error: {}'.format(error))
-        resp = 'Error looking up {}, please try something else.'.format(value)
-        alexa = build_response(
+        alexa = alexa_response(
             {},
-            build_speechlet_response('Error', resp, None, True)
+            build_speech_response('Error', TXT_ERROR.format(value), None, True)
         )
         return alexa
-
