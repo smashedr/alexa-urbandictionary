@@ -1,5 +1,7 @@
 # Alexa Urban Dictionary
 
+[![build status](https://git.cssnr.com/shane/mayflower-ci/badges/master/build.svg)](https://git.cssnr.com/shane/mayflower-ci/commits/master) [![coverage report](https://git.cssnr.com/shane/mayflower-ci/badges/master/coverage.svg)](https://git.cssnr.com/shane/mayflower-ci/commits/master)
+
 This skill lets you look Urban Dictionary definitions with Alexa.
 
 ## Phrases
