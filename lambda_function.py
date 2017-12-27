@@ -46,9 +46,20 @@ def lambda_handler(event, context):
         value = event['request']['intent']['slots']['term']['value']
         value = value.lower().replace('define', '').strip()
         value = value.lower().replace('lookup', '').strip()
+        value = value.lower().replace('look up', '').strip()
         value = value.lower().replace('search', '').strip()
         value = value.lower().replace('find', '').strip()
         print('value: {}'.format(value))
+    except Exception as error:
+        print('error: {}'.format(error))
+        response = 'I did not understand that request, please try again.'
+        alexa_response = build_response(
+            {},
+            build_speechlet_response('Error', response, None, True)
+        )
+        return alexa_response
+
+    try:
         definition = lookup_urban(value)
         print('definition: {}'.format(definition))
         response = '{}. {}'.format(
@@ -58,15 +69,13 @@ def lambda_handler(event, context):
             {},
             build_speechlet_response('Definition', response, None, True)
         )
-        print(alexa_response)
         return alexa_response
     except Exception as error:
         print('error: {}'.format(error))
-        response = 'Error. {}'.format(error)
+        response = 'Error looking up {}, please try again.'.format(value)
         alexa_response = build_response(
             {},
             build_speechlet_response('Error', response, None, True)
         )
-        print(alexa_response)
         return alexa_response
 
