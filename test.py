@@ -24,7 +24,8 @@ def test_data(term):
                     'term': {
                         'confirmationStatus': 'NONE',
                         'name': 'term',
-                        'value': term}
+                        'value': term
+                    }
                 }
             },
             'locale': 'en-US',
