@@ -64,10 +64,8 @@ def lambda_handler(event, context):
 
     try:
         definition = lookup_urban(value)
-        print('definition: {}'.format(definition))
-        speech = '{}. {}'.format(
-            value, definition
-        )
+        speech = '{}. {}'.format(value, definition)
+        print('speech: {}'.format(speech))
         alexa = alexa_response(
             {},
             build_speech_response('Definition', speech, None, True)
