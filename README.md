@@ -24,9 +24,7 @@ Look up Urban Dictionary definitions.
 
 ## Full Skill Description
 
-Allows you to search for definitions on Urban Dictionary using Alexa. Simply tell Alexa to ask Urban Dictionary for a definition. Example: "Alexa, ask Urban Dictionary to lookup deface".
-
-Definitions from Urban Dictionary are user submitted and may not appropriate for all audiences. For more information about definitions provided by this skill visit www.urbandictionary.com
+Allows you to search for definitions on Urban Dictionary using Alexa. Simply tell Alexa to ask Urban Dictionary for a definition. Example: "Alexa, ask Urban Dictionary to lookup deface". Definitions from Urban Dictionary are moderated user submissions but may not appropriate for all audiences. For more information about definitions provided by this skill visit www.urbandictionary.com
 
 ## Keywords
 
